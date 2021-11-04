@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -26,13 +24,4 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		i++;
 	}
     return(d);
-}
-
-int	main()
-{
-    char *d = strdup("01234"); 
-
-    //char *s = strdup("achraf");
-    //printf("%s\n",(char *)memmove(d + 2 , d, 3));
-    printf("%s\n",(char *)ft_memmove(d + 2, d , 3));
 }

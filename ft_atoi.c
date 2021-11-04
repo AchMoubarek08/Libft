@@ -24,12 +24,3 @@ int ft_atoi(const char *str)
 	}
 	return ( k * a);
 }
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-	char *str ="  123j45";
-	printf("%d\n", atoi(str));
-	printf("%d", ft_atoi(str));
-
-}

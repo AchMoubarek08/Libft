@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "libft.h"
 void *ft_memset (void *s, int c, size_t n)
 {
@@ -14,13 +13,4 @@ void *ft_memset (void *s, int c, size_t n)
 		i++;
 	}
 	return (s);
-}
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char *str = strdup("hahahahaha");
-	char c = 'f';
-	printf("%s",(char *)ft_memset (str, c, 8));
-
 }

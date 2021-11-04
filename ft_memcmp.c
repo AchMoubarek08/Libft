@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "libft.h"
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -23,14 +22,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	if ( z < 0)
 		return(-1);
 	return(0);
-}
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	unsigned char y[] ="salam";
-	unsigned char z[] ="salamk";
-	printf("%d\n",ft_memcmp(y, z, 0));
-	printf("%d", memcmp(y, z, 0));
-
 }

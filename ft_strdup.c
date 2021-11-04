@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 char *ft_strdup(const char *s)
 {
@@ -20,11 +17,4 @@ char *ft_strdup(const char *s)
 	}
 	m[i] = '\0';
 	return(m);
-}
-int main()
-{
-	// ft_strdup("achraf");
-	printf("%s", ft_strdup("achraf"));
-
-
 }

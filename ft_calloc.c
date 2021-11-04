@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 void *ft_calloc(size_t nmemb, size_t size)
 {
@@ -13,8 +10,4 @@ void *ft_calloc(size_t nmemb, size_t size)
 		return(0);
 	memset(s, 0, nmemb * size);
 	return(s);
-}
-int main()
-{
-	printf("%s", (char *)ft_calloc(5, 1));
 }
