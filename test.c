@@ -1,8 +1,7 @@
 #include "libft.h"
 int main()
 {
-	char const *s1 = "///--hello-- \\//";
-	char const *set = " //---";
+	char const *s1 = "meeeessi";
 
-	printf("%d", ft_end(s1, set));
+	printf("%s", ft_substr(s1, 2, 5));
 }

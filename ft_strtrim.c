@@ -33,11 +33,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_end(s1, set);
 	if( !(s1))
 		return (NULL);
-	if(
-
-
+	str = (char *)malloc(sizeof(char) * end - start + 1);
+	if  (str == NULL)
+		return (0);
+	ft_strlcpy(str, s1 + start, end - start + 1);
+	str[end - start + 1] = '\0';
+	return(str);
 }
-
 //char *str = "cccachrafccc";
 //char c = 'c';
 /*char *ft_strtrim(char const *s1, char const *set)
