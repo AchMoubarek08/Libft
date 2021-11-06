@@ -1,7 +1,8 @@
 #include "libft.h"
 int main()
 {
-	char const *s1 = "ana";
-	char const *s2 = "M9awed"; 
-	printf("%s", ft_strjoin(s1, s2));
+	char const *s1 = "///--hello-- \\//";
+	char const *set = " //---";
+
+	printf("%d", ft_end(s1, set));
 }

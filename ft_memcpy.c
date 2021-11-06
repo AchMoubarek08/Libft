@@ -22,9 +22,4 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	return(dest);
 
 }
-int main()
-{
-	char *src = strdup("messi");
-	char *dest = strdup("133ii7");
-	printf("%s",(unsigned char *)ft_memcpy(dest, src, 3));
-}
+
