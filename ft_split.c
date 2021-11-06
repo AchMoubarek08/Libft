@@ -4,6 +4,9 @@ int lettres(char const *s, char c)
 {
 	int i;
 	int countL;
+	int	b;
+	char **str;
+	b = 0;
 
 	countL = 0;
 	i = 0;
@@ -16,12 +19,15 @@ int lettres(char const *s, char c)
 			i++;
 			countL++;
 		}
-		return(countL);
+		str[b][countL] = 0;
+		countL = 0;
+		b++;
+
 	}
 	return(0);
+
 }
-/*
-int strings(char *s, char c)
+int strings(char const *s, char c)
 {
 	int i;
 	int countS;
@@ -46,8 +52,24 @@ int strings(char *s, char c)
 char **ft_split(char *s, char c)
 {
 	int i;
+	int j;
+	int s;
+	int l;
+	char **str;
+
+	i = 0;
+	j = 0;
+	l = lettres(s, c);
+	s = strings(s, c);
+	str = (char *)malloc(sizeof(char *) * s + 1);
+	str[i + 1] = NULL;
+	while(i <= s)
+	{
+		str[j][l] = s[i]
+		i++;
+	}
+
 }
-*/
 #include <stdio.h>
 int main()
 {
