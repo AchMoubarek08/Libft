@@ -1,13 +1,37 @@
 #include "libft.h"
+char **remplir(char const *s, char c, char **str)
+{
+	int i;
+	int j;
+	int k;
 
-int lettres(char const *s, char c)
+	k = 0;
+	j = 0;
+	i = 0;
+	while(s[k])
+	{
+		while(s[k] == c && s[k])
+		{
+			k++;
+		}
+		while(s[k] != c && s[k])
+		{
+			str[i][j] = s[k];
+			k++;
+			j++;
+		}
+		i++;
+		j = 0;
+	}
+	return(str);	
+}
+char **lettres(char const *s, char c, char **str)
 {
 	int i;
 	int countL;
 	int	b;
-	char **str;
-	b = 0;
 
+	b = 0;
 	countL = 0;
 	i = 0;
 	while(s[i])
@@ -19,14 +43,14 @@ int lettres(char const *s, char c)
 			i++;
 			countL++;
 		}
+		str[b] = (char *)malloc(sizeof(char) * countL + 1); 
 		str[b][countL] = 0;
 		countL = 0;
 		b++;
-
 	}
-	return(0);
-
+	return(remplir(s, c, str));
 }
+
 int strings(char const *s, char c)
 {
 	int i;
@@ -48,32 +72,28 @@ int strings(char const *s, char c)
 	}
 	return (countS);
 }
-
 char **ft_split(char *s, char c)
 {
-	int i;
-	int j;
-	int s;
-	int l;
+	int st;
 	char **str;
 
-	i = 0;
-	j = 0;
-	l = lettres(s, c);
-	s = strings(s, c);
-	str = (char *)malloc(sizeof(char *) * s + 1);
-	str[i + 1] = NULL;
-	while(i <= s)
-	{
-		str[j][l] = s[i]
-		i++;
-	}
-
+	st = strings(s, c);
+	str = malloc(sizeof(char *) * st + 1);
+	str[st] = NULL;
+	return(lettres(s, c, str));
 }
+
 #include <stdio.h>
 int main()
 {
 	char *str = "   achraf messi barcalona kkkk     k    k k";
 	char c = ' ';
-	printf("%d",lettres(str, c));
+	char **str1;
+	int i = 0;
+	str1 = ft_split(str, c);
+	while(i <= 9)
+	{
+		printf("%s\n",str1[i]);
+		i++;
+	}
 }

@@ -1,7 +1,9 @@
 #include "libft.h"
 int main()
 {
-	char const *s1 = "meeeessi";
+	int i;
 
-	printf("%s", ft_substr(s1, 2, 5));
+	i = -2147;
+
+	printf("%s", ft_itoa(i));
 }
