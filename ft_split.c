@@ -82,18 +82,3 @@ char **ft_split(char *s, char c)
 	str[st] = NULL;
 	return(lettres(s, c, str));
 }
-
-#include <stdio.h>
-int main()
-{
-	char *str = "   achraf messi barcalona kkkk     k    k k";
-	char c = ' ';
-	char **str1;
-	int i = 0;
-	str1 = ft_split(str, c);
-	while(i <= 9)
-	{
-		printf("%s\n",str1[i]);
-		i++;
-	}
-}
