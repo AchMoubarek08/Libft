@@ -1,4 +1,5 @@
 #include "libft.h"
+
 int counter(int n) 
 {
 	int count;
@@ -17,7 +18,7 @@ char *minMax(int n , char *str)
 {	
 	if ( n == -2147483648)
 	{
-		str = strdup("-2147483648");
+		str = ft_strdup("-2147483648");
 		return(str);
 	}
 	return NULL;
@@ -38,14 +39,13 @@ char *ft_itoa(int n)
 
 	str = NULL;
 	i = 0;
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n == -2147483648)
 		return (minMax(n, str));
 	count = counter(n);
-	if(n < 0)
-	{
+	if(n < 0 && ++i)
 		str = negative(&n, str, count);
-		i++;
-	}
 	else
 		str = malloc(sizeof(char) * count + 1);
 	str[count + i] = 0;

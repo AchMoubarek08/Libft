@@ -6,7 +6,7 @@ void ft_bzero(void *s, size_t n)
 	i = 0;
 	char *f;
 	f = s;
-	while(f[i] && i < n)
+	while(i < n)
 	{
 		f[i] = '\0';
 		i++;
