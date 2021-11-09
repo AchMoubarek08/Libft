@@ -12,10 +12,8 @@ int ft_start(char const *s1, char const *set)
 }
 int ft_end(char const *s1, char const *set)
 {
-	int i;
 	int len;
 
-	i = 0;
 	len = ft_strlen(s1);
 	while(ft_strchr(set , s1[len - 1]))
 	{

@@ -17,8 +17,7 @@ char *minMax(int n , char *str)
 {	
 	if ( n == -2147483648)
 	{
-		str = malloc(sizeof(char) * 12);
-		str = "-2147483648";
+		str = strdup("-2147483648");
 		return(str);
 	}
 	return NULL;
@@ -37,6 +36,7 @@ char *ft_itoa(int n)
 	int i;
 	int count;
 
+	str = NULL;
 	i = 0;
 	if (n == -2147483648)
 		return (minMax(n, str));

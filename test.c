@@ -2,7 +2,6 @@
 
 int main()
 {
-	int fd;
-	char *str = "achraf";
-	ft_putendl_fd(str, fd);
+	
+	ft_itoa(6000);
 }
