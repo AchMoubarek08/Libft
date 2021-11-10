@@ -10,5 +10,7 @@ char *ft_strrchr(const char *s, int c)
 			return((char *)s + len_s);
 		len_s--;
 	}
-	return(NULL);
+	if(s[len_s] != (char)c)
+		return(NULL);
+	return((char *)s);
 }

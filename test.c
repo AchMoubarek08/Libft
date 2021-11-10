@@ -2,6 +2,6 @@
 
 int main()
 {
-	
-	ft_itoa(6000);
+	int fd;
+	ft_putnbr_fd(12222, fd);
 }
