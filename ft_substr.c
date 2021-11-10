@@ -7,6 +7,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (ft_strlen(s) < start || len == 0)
+		return (ft_strdup(""));
 	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	while (s[i])
@@ -18,6 +20,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		}
 		i++;
 	}
-	str[i] = '\0';
+	str[j] = '\0';
 	return(str);
 }
