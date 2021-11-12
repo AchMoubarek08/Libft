@@ -80,5 +80,5 @@ char **ft_split(char *s, char c)
 	st = strings(s, c);
 	str = malloc(sizeof(char *) * st + 1);
 	str[st] = NULL;
-	return(lettres(s, c, str));
+	return (lettres(s, c, str));
 }

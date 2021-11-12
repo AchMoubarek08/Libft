@@ -2,6 +2,9 @@
 
 int main()
 {
-	int fd;
-	ft_putnbr_fd(12222, fd);
+		char *s1 = "  \t \t \n";
+        char *s2 = "";
+        char *ret = ft_strtrim(s1, " \n\t");
+		printf("%s", ret);
 }
+	

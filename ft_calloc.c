@@ -1,13 +1,25 @@
-#include "libft.h"
-void *ft_calloc(size_t nmemb, size_t size)
-{
-	char *s;
-	s = "ach";
-	size_t len;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amoubare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/12 04:59:30 by amoubare          #+#    #+#             */
+/*   Updated: 2021/11/12 04:59:34 by amoubare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	len = ft_strlen(s);
-	if(!(s = (char *)malloc(sizeof(char) * len + 1)))
-		return(0);
-	memset(s, 0, nmemb * size);
-	return(s);
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*s;
+
+	s = malloc(nmemb * size);
+	if (s == NULL)
+		return (0);
+	ft_memset (s, 0, nmemb * size);
+	return (s);
 }
+ 	

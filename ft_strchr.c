@@ -6,7 +6,7 @@
 /*   By: amoubare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:43:12 by amoubare          #+#    #+#             */
-/*   Updated: 2021/11/10 21:47:09 by amoubare         ###   ########.fr       */
+/*   Updated: 2021/11/12 05:03:10 by amoubare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char *)s+i);
+			return ((char *)s + i);
 		i++;
 	}
 	if (s[i] == (char)c)
