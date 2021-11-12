@@ -2,9 +2,15 @@
 
 int main()
 {
-		char *s1 = "  \t \t \n";
-        char *s2 = "";
-        char *ret = ft_strtrim(s1, " \n\t");
-		printf("%s", ret);
+        int i;
+        i = 0;
+		char *s1 = "  jjjj    jj jjjjj   ";
+        char c = ' ';
+        char **ret = ft_split(s1, c);
+        while(ret[i])
+        {
+            printf("%s\n", ret[i++]);
+        }
+
 }
 	

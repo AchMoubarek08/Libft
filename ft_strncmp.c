@@ -23,7 +23,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	s22 = (unsigned char *)s2;
 	if (n == 0)
 		return (0);
-	while (s11[i] && s22[i] && i < n - 1)
+	while (s11[i] && s22[i] && s11[i] == s22[i] && i < n - 1)
 			i++;
-	return (s11[i] - s22[i]);
+	if (i != n)
+		return (s11[i] - s22[i]);
+	return (0);
 }
